@@ -1,12 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  tools:context="me.icalicul.afrizal.siapun.ExerciseMenuActivity">
+
+  <Spinner
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/noSoal"
+    android:spinnerMode="dropdown"
+    android:layout_alignRight="@+id/question"
+    android:layout_alignEnd="@+id/question"/>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="02 : 00 : 00"
+    android:id="@+id/timerText"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"/>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="Lorem ipsum dolor sit amet"
+    android:id="@+id/question"
+    android:layout_marginTop="60dp"
+    android:layout_below="@+id/timerText"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="20dp"/>
+
+  <RadioGroup
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="me.icalicul.afrizal.siapun.ExerciseMenuActivity">
+    android:layout_below="@+id/question"
+    android:layout_alignRight="@+id/question"
+    android:layout_alignEnd="@+id/question"
+    android:layout_alignLeft="@+id/question"
+    android:layout_alignStart="@+id/question">
+
+    <RadioButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="New RadioButton"
+      android:id="@+id/choice1"/>
+
+    <RadioButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="New RadioButton"
+      android:id="@+id/choice2"/>
+
+    <RadioButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="New RadioButton"
+      android:id="@+id/choice3"/>
+
+    <RadioButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="New RadioButton"
+      android:id="@+id/choice4"/>
+
+    <RadioButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="New RadioButton"
+      android:id="@+id/choice5"/>
+  </RadioGroup>
 
 </RelativeLayout>

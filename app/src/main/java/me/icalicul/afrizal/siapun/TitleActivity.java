@@ -7,17 +7,17 @@ import android.view.View;
 
 public class TitleActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_title);
-    }
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_title);
+  }
 
-    public void gotoExerciseMenu(View view) {
-        startActivity(new Intent(getApplicationContext(), ExerciseMenuActivity.class));
-    }
+  public void gotoExerciseMenu(View view) {
+    startActivity(new Intent(getApplicationContext(), ExerciseMenuActivity.class));
+  }
 
-    public void gotoHistoryMenu(View view) {
-        startActivity(new Intent(getApplicationContext(), HistoryMenuActivity.class));
-    }
+  public void gotoHistoryMenu(View view) {
+    startActivity(new Intent(getApplicationContext(), HistoryMenuActivity.class));
+  }
 }

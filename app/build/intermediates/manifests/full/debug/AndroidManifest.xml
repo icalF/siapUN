@@ -23,6 +23,8 @@
         </activity>
         <activity android:name="me.icalicul.afrizal.siapun.HistoryMenuActivity" />
         <activity android:name="me.icalicul.afrizal.siapun.ExerciseMenuActivity" />
+        <activity android:name="me.icalicul.afrizal.siapun.ResultActivity" >
+        </activity>
     </application>
 
 </manifest>

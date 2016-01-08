@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\Gocil\\AndroidStudioProjects\\SiapUN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Gocil\\AndroidStudioProjects\\SiapUN\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     }
