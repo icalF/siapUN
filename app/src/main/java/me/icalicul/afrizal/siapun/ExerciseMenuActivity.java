@@ -169,21 +169,8 @@ public class ExerciseMenuActivity extends AppCompatActivity implements OnItemSel
     List<Soal> content = new LinkedList<>();
     try {
       JSONArray soals = new JSONArray(json);
-      JSONObject soalJSON;
-      Soal soal;
-      List<String> choices;
-
       for (int i = 0; i < soals.length(); ++i) {
-        soalJSON = soals.getJSONObject(i);
-
-        choices = new LinkedList<>();
-        JSONArray choicesJSON = soalJSON.getJSONArray("choices");
-        for (int j = 0; j < choicesJSON.length(); ++j) {
-          choices.add(choicesJSON.getString(j));
-        }
-
-        soal = new Soal(soalJSON.getString("question"), choices, soalJSON.getInt("answer"));
-        content.add(soal);
+        content.add(new Soal(soals.getJSONObject(i)));
       }
     } catch (JSONException e) {
       e.printStackTrace();

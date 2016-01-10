@@ -4,6 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -14,14 +15,20 @@ public class Soal {
   private List<String> choices;
   private int answer;
 
-  public Soal(String question, List<String> choices, int answer) {
-    this.answer = answer;
-    this.question = question;
-    this.choices = choices;
-  }
-
   public Soal(JSONObject soalJSON) {
-
+    List<String> choices = new LinkedList<>();
+    JSONArray choicesJSON = null;
+    try {
+      choicesJSON = soalJSON.getJSONArray("choices");
+      for (int j = 0; j < choicesJSON.length(); ++j) {
+        choices.add(choicesJSON.getString(j));
+      }
+      this.answer = soalJSON.getInt("answer");
+      this.question = soalJSON.getString("question");
+      this.choices = choices;
+    } catch (JSONException e) {
+      e.printStackTrace();
+    }
   }
 
   public String getQuestion() {
