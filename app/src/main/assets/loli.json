@@ -9,5 +9,16 @@
       "kampes"
     ],
     "answer" : 2
+  },
+  {
+    "question" : "Besar pasak daripada ... ?",
+    "choices" : [
+      "tiang",
+      "tiyang",
+      "eyang",
+      "ayang",
+      "pesek"
+    ],
+    "answer" : 4
   }
 ]

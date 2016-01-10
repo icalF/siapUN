@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="no_soal">
+    <item>Soal 1</item>
+    <item>Soal 2</item>
+    <item>Soal 3</item>
+    <item>Soal 4</item>
+    <item>Soal 5</item>
+    <item>Soal 6</item>
+    <item>Soal 7</item>
+    <item>Soal 8</item>
+    <item>Soal 9</item>
+    <item>Soal 10</item>
+    <item>Soal 11</item>
+    <item>Soal 12</item>
+    <item>Soal 13</item>
+    <item>Soal 14</item>
+    <item>Soal 15</item>
+    <item>Soal 16</item>
+    <item>Soal 17</item>
+    <item>Soal 18</item>
+    <item>Soal 19</item>
+    <item>Soal 20</item>
+    <item>Soal 21</item>
+    <item>Soal 22</item>
+    <item>Soal 23</item>
+    <item>Soal 24</item>
+    <item>Soal 25</item>
+    <item>Soal 26</item>
+    <item>Soal 27</item>
+    <item>Soal 28</item>
+    <item>Soal 29</item>
+    <item>Soal 30</item>
+    <item>Soal 31</item>
+    <item>Soal 32</item>
+    <item>Soal 33</item>
+    <item>Soal 34</item>
+    <item>Soal 35</item>
+    <item>Soal 36</item>
+    <item>Soal 37</item>
+    <item>Soal 38</item>
+    <item>Soal 39</item>
+    <item>Soal 40</item>
+    <item>Soal 41</item>
+    <item>Soal 42</item>
+    <item>Soal 43</item>
+    <item>Soal 44</item>
+    <item>Soal 45</item>
+    <item>Soal 46</item>
+    <item>Soal 47</item>
+    <item>Soal 48</item>
+    <item>Soal 49</item>
+    <item>Soal 50</item>
+  </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -213,8 +265,8 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">Siap UN</string>
-    <string name="ready_confirm_text">READY?</string>
-    <string name="resume_confirm_text">RESUME?</string>
+    <string name="ready_confirm_text">SIAP?</string>
+    <string name="resume_confirm_text">LANJUTKAN?</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

@@ -8,7 +8,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -22,30 +26,38 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ExerciseMenuActivity extends AppCompatActivity {
+public class ExerciseMenuActivity extends AppCompatActivity implements OnItemSelectedListener {
   private final static long TIME_LIMIT = 7200000;
   private final static long MILLIS = 1000;
   private TaskTimer timer;
   private long remainingTime = TIME_LIMIT;
   private int questionNum = 0;
   private List<Soal> soals;
+  private Spinner spinner;
+
+  @Override
+  public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+    questionNum = position;
+    updateContent(questionNum);
+  }
+
+  @Override
+  public void onNothingSelected(AdapterView<?> parent) {} // stub
+
+  public void finishExercise(View view) { startActivity(new Intent(getApplicationContext(), ResultActivity.class));  }
 
   private class TaskTimer extends CountDownTimer {
     public TextView timerText;
 
-    TaskTimer(long millisInFuture, long countDownInterval) {
-      super(millisInFuture, countDownInterval);
-    }
+    TaskTimer(long millisInFuture, long countDownInterval) { super(millisInFuture, countDownInterval); }
 
     public void onTick(long millisUntilFinished) {
-      remainingTime = millisUntilFinished / 1000;
-      putText(remainingTime);
+      remainingTime = millisUntilFinished;
+      putText(remainingTime / 1000);
     }
 
     @Override
-    public void onFinish() {
-      startActivity(new Intent(getApplicationContext(), ResultActivity.class));
-    }
+    public void onFinish() { startActivity(new Intent(getApplicationContext(), ResultActivity.class)); }
 
     public String putNum(Long num) { return num < 10 ? "0"+num : num.toString(); }
 
@@ -111,8 +123,29 @@ public class ExerciseMenuActivity extends AppCompatActivity {
     choice5.setText(soal.getChoices().get(4));
   }
 
+  public void nextQuestion(View view) {
+    if(spinner.getSelectedItemPosition() < spinner.getAdapter().getCount()) {
+      spinner.setSelection(spinner.getSelectedItemPosition() + 1);
+      updateContent(++questionNum);
+    }
+  }
+  public void prevQuestion(View view) {
+    if(spinner.getSelectedItemPosition() > 0) {
+      spinner.setSelection(spinner.getSelectedItemPosition() - 1);
+      updateContent(--questionNum);
+    }
+  }
+
   public void hasReady(View view) {
     setContentView(R.layout.activity_exercise_menu);
+
+    // Initialize dropdown menu
+    spinner = (Spinner) findViewById(R.id.noSoal);
+    spinner.setOnItemSelectedListener(this);
+    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+      R.array.no_soal, android.R.layout.simple_spinner_item);
+    spinner.setAdapter(adapter);
+
     updateContent(questionNum);
     timer.timerText = (TextView) findViewById(R.id.timerText);
     timer.start();
