@@ -1,15 +1,12 @@
 package me.icalicul.afrizal.siapun;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -37,7 +34,6 @@ public class ExerciseMenuActivity extends AppCompatActivity implements OnItemSel
   private final static long MILLIS = 1000;
   private TaskTimer timer;
   private long remainingTime = TIME_LIMIT;
-  private long score = 0;
 
   private List<Soal> soals;
   private Integer[] opts;
@@ -47,6 +43,7 @@ public class ExerciseMenuActivity extends AppCompatActivity implements OnItemSel
   private Lock optionChecking = new ReentrantLock();
 
   private static final String TAG = "MY_TAG";
+  public static final String SCORE = "me.icalicul.afrizal.siapun.SCORE";
 
   @Override
   public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -58,7 +55,20 @@ public class ExerciseMenuActivity extends AppCompatActivity implements OnItemSel
   @Override
   public void onNothingSelected(AdapterView<?> parent) {} // stub
 
-  public void finishExercise(View view) { startActivity(new Intent(getApplicationContext(), ResultActivity.class));  }
+  public void finishExercise(View view) { getScore(); }
+
+  private void getScore() {
+    int score = 0;
+    for (int i = 0; i < soals.size(); ++i) {
+      try {
+        score += (opts[i] == soals.get(i).getAnswer() ? 100 : 0);
+      } catch (NullPointerException e) {}
+    }
+
+    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+    intent.putExtra(SCORE, (double) score / soals.size());
+    startActivity(intent);
+  }
 
   private class TaskTimer extends CountDownTimer {
     public TextView timerText;
@@ -71,7 +81,10 @@ public class ExerciseMenuActivity extends AppCompatActivity implements OnItemSel
     }
 
     @Override
-    public void onFinish() { startActivity(new Intent(getApplicationContext(), ResultActivity.class)); }
+    public void onFinish() {
+      ExerciseMenuActivity activity = (ExerciseMenuActivity) getApplicationContext();
+      activity.getScore();
+    }
 
     public String putNum(Long num) { return num < 10 ? "0"+num : num.toString(); }
 
