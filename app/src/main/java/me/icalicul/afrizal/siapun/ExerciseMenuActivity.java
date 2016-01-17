@@ -227,7 +227,7 @@ public class ExerciseMenuActivity extends AppCompatActivity implements OnItemSel
     String json = "";
     try {
       InputStream is = am.open("loli.json");
-      InputStreamReader isr = new InputStreamReader(is);
+      InputStreamReader isr = new InputStreamReader(is, "UTF-8");
       BufferedReader br = new BufferedReader(isr);
 
       for (String s = br.readLine(); s != null; s = br.readLine()) {
