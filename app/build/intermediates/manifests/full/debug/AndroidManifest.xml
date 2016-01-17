@@ -22,8 +22,10 @@
             </intent-filter>
         </activity>
         <activity android:name="me.icalicul.afrizal.siapun.HistoryMenuActivity" />
-        <activity android:name="me.icalicul.afrizal.siapun.ExerciseMenuActivity" />
+        <activity android:name="me.icalicul.afrizal.siapun.ExerciseActivity" />
         <activity android:name="me.icalicul.afrizal.siapun.ResultActivity" >
+        </activity>
+        <activity android:name="me.icalicul.afrizal.siapun.ExerciseMenuActivity" >
         </activity>
     </application>
 

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:2:1-24:12
+ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:2:11-47
 		INJECTED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidMan
 		INJECTED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:5:3-22:17
+ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:5:3-24:17
 MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
@@ -45,14 +45,18 @@ activity#me.icalicul.afrizal.siapun.HistoryMenuActivity
 ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:18:5-52
 	android:name
 		ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:18:15-50
-activity#me.icalicul.afrizal.siapun.ExerciseMenuActivity
-ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:19:5-53
+activity#me.icalicul.afrizal.siapun.ExerciseActivity
+ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:19:5-49
 	android:name
-		ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:19:15-51
+		ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:19:15-47
 activity#me.icalicul.afrizal.siapun.ResultActivity
 ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:20:5-21:16
 	android:name
 		ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:20:15-45
+activity#me.icalicul.afrizal.siapun.ExerciseMenuActivity
+ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:22:5-23:16
+	android:name
+		ADDED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml:22:15-51
 uses-sdk
 INJECTED from C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Afrizal\AndroidStudioProjects\siapUN\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43

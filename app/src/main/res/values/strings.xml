@@ -3,5 +3,28 @@
   <string name="ready_confirm_text">SIAP?</string>
   <string name="resume_confirm_text">LANJUTKAN?</string>
   <string name="checked_stat">checked</string>
+  <string name="start">Mulai</string>
+  <string-array name="spinner_paket">
+    <item>-- Pilih paket --</item>
+    <item>Paket 1</item>
+    <item>Paket 2</item>
+    <item>Paket 3</item>
+    <item>Paket 4</item>
+    <item>Paket 5</item>
+    <item>Paket 6</item>
+    <item>Paket 7</item>
+    <item>Paket 8</item>
+    <item>Paket 9</item>
+    <item>Paket 10</item>
+  </string-array>
+  <string-array name="spinner_mapel">
+    <item>-- Pilih mata pelajaran --</item>
+    <item>Bahasa Indonesia</item>
+    <item>Bahasa Inggris</item>
+    <item>Matematika</item>
+    <item>Fisika</item>
+    <item>Kimia</item>
+    <item>Biologi</item>
+  </string-array>
 
 </resources>

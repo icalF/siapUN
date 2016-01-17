@@ -8,10 +8,6 @@
         "source": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Gocil\\AndroidStudioProjects\\SiapUN\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_exercise_menu_before.xml",
-        "source": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\src\\main\\res\\layout\\activity_exercise_menu_before.xml"
-    },
-    {
         "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_material.xml"
     },
@@ -22,6 +18,10 @@
     {
         "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_exercise_page.xml",
+        "source": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\src\\main\\res\\layout\\activity_exercise_page.xml"
     },
     {
         "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
@@ -138,6 +138,10 @@
     {
         "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_exercise_init.xml",
+        "source": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\src\\main\\res\\layout\\activity_exercise_init.xml"
     },
     {
         "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Gocil\\AndroidStudioProjects\\SiapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_title.xml",
@@ -396,6 +400,10 @@
         "source": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Gocil\\AndroidStudioProjects\\SiapUN\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
+        "merged": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_exercise_resume.xml",
+        "source": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\src\\main\\res\\layout\\activity_exercise_resume.xml"
+    },
+    {
         "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
@@ -618,10 +626,6 @@
     {
         "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_history_menu.xml",
         "source": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\src\\main\\res\\layout\\activity_history_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_exercise_menu_stopped.xml",
-        "source": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\src\\main\\res\\layout\\activity_exercise_menu_stopped.xml"
     },
     {
         "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Gocil\\AndroidStudioProjects\\SiapUN\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
