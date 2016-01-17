@@ -1,6 +1,8 @@
 package me.icalicul.afrizal.siapun;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -18,4 +20,10 @@ public class ResultActivity extends AppCompatActivity {
     scoreView.setText(String.format("%.2f", score));
   }
 
+  @Override
+  public void onBackPressed() {
+    Intent intent = new Intent(getApplicationContext(), TitleActivity.class);
+    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    startActivity(intent);
+  }
 }
