@@ -17,7 +17,8 @@
     android:id="@+id/spinnerPaket"
     android:spinnerMode="dropdown"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="109dp"/>
+    android:layout_marginTop="109dp"
+    />
 
   <Spinner
     android:layout_width="wrap_content"

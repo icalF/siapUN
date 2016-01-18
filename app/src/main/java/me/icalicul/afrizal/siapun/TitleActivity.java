@@ -11,6 +11,18 @@ public class TitleActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_title);
+    findViewById(R.id.latihanMainMenu).setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        startActivity(new Intent(TitleActivity.this, ExerciseMenuActivity.class));
+      }
+    });
+    findViewById(R.id.riwayatMainMenu).setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        startActivity(new Intent(TitleActivity.this, HistoryMenuActivity.class));
+      }
+    });
   }
 
   public void gotoExerciseMenu(View view) {

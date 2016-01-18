@@ -14,6 +14,7 @@ public class ExerciseMenuActivity extends AppCompatActivity {
   private Spinner spinnerMapel;
 
   public static final String FILEDIR = "me.icalicul.afrizal.siapun.FILEDIR";
+  public static final String SUBJECT = "me.icalicul.afrizal.siapun.SUBJECT";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,12 @@ public class ExerciseMenuActivity extends AppCompatActivity {
       this, R.array.spinner_mapel, android.R.layout.simple_spinner_item);
     adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     spinnerMapel.setAdapter(adapter2);
+    findViewById(R.id.startButton).setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        startActivity(new Intent(ExerciseMenuActivity.this, ExerciseActivity.class));
+      }
+    });
   }
 
   public void beginExercise(View view) {
@@ -52,11 +59,13 @@ public class ExerciseMenuActivity extends AppCompatActivity {
     } else {
       String[] mapelList = {"ind", "eng", "mat", "fis", "kim", "bio"};
       String fileDir = "questions/v";
+      String subject = mapelList[mapel - 1];
       fileDir += paket;
-      fileDir += "/" + mapelList[mapel - 1] + ".json";
+      fileDir += "/" + subject + ".json";
 
       Intent intent = new Intent(getApplicationContext(), ExerciseActivity.class);
       intent.putExtra(FILEDIR, fileDir);
+      intent.putExtra(SUBJECT, subject);
       startActivity(intent);
     }
   }

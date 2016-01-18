@@ -39,6 +39,7 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
   private List<Soal> soals;
   private Integer[] opts;
   private Spinner spinner;
+  private String subject;
   private int questionNum = 0;
   private RadioGroup.OnCheckedChangeListener checkListener;
   private Lock optionChecking = new ReentrantLock();
@@ -67,6 +68,7 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
 
     Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
     intent.putExtra(SCORE, (double) score / soals.size());
+    intent.putExtra(ExerciseMenuActivity.SUBJECT, subject);
     startActivity(intent);
   }
 
@@ -217,6 +219,7 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
   public List getContent() {
     Intent intent = getIntent();
     String fileDir = intent.getStringExtra(ExerciseMenuActivity.FILEDIR);
+    subject = intent.getStringExtra(ExerciseMenuActivity.SUBJECT);
 
     AssetManager am = this.getAssets();
     String json = "";
