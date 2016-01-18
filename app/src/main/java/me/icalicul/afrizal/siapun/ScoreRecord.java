@@ -16,6 +16,14 @@ public class ScoreRecord {
     return subject;
   }
 
+  @Override
+  public String toString() {
+    return "ScoreRecord{" +
+      "subject='" + subject + '\'' +
+      ", score=" + score +
+      '}';
+  }
+
   public void setSubject(String subject) {
     this.subject = subject;
   }

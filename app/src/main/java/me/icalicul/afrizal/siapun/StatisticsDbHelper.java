@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ public class StatisticsDbHelper extends SQLiteOpenHelper {
     "CREATE TABLE " + StatisticsSchema.StatisticEntry.TABLE_NAME + " (" +
       StatisticsSchema.StatisticEntry._ID + " INTEGER PRIMARY KEY," +
       StatisticsSchema.StatisticEntry.COLUMN_NAME_SUBJECT + TEXT_TYPE + COMMA_SEP +
-      StatisticsSchema.StatisticEntry.COLUMN_NAME_SCORE + REAL_TYPE + COMMA_SEP +
+      StatisticsSchema.StatisticEntry.COLUMN_NAME_SCORE + REAL_TYPE +
       " )";
   private static final String SQL_DELETE_ENTRIES =
     "DROP TABLE IF EXISTS " + StatisticsSchema.StatisticEntry.TABLE_NAME;
@@ -50,7 +51,7 @@ public class StatisticsDbHelper extends SQLiteOpenHelper {
     ContentValues contentValues = new ContentValues();
     contentValues.put(StatisticsSchema.StatisticEntry.COLUMN_NAME_SUBJECT, subject);
     contentValues.put(StatisticsSchema.StatisticEntry.COLUMN_NAME_SCORE, score);
-    db.insert(StatisticsSchema.StatisticEntry.TABLE_NAME, null, contentValues);
+    long l = db.insert(StatisticsSchema.StatisticEntry.TABLE_NAME, null, contentValues);
   }
 
   public List<ScoreRecord> getScores() {

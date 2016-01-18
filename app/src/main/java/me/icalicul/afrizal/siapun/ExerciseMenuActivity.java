@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -14,6 +15,7 @@ public class ExerciseMenuActivity extends AppCompatActivity {
   private Spinner spinnerMapel;
 
   public static final String FILEDIR = "me.icalicul.afrizal.siapun.FILEDIR";
+  public static final String DEBUG = "DEBUG >> ";
   public static final String SUBJECT = "me.icalicul.afrizal.siapun.SUBJECT";
 
   @Override
@@ -33,12 +35,6 @@ public class ExerciseMenuActivity extends AppCompatActivity {
       this, R.array.spinner_mapel, android.R.layout.simple_spinner_item);
     adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     spinnerMapel.setAdapter(adapter2);
-    findViewById(R.id.startButton).setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        startActivity(new Intent(ExerciseMenuActivity.this, ExerciseActivity.class));
-      }
-    });
   }
 
   public void beginExercise(View view) {

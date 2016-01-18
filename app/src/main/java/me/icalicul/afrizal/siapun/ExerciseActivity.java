@@ -39,6 +39,7 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
   private List<Soal> soals;
   private Integer[] opts;
   private Spinner spinner;
+  private String fileDir;
   private String subject;
   private int questionNum = 0;
   private RadioGroup.OnCheckedChangeListener checkListener;
@@ -103,6 +104,11 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_exercise_init);
+
+    Intent intent = getIntent();
+    fileDir = intent.getStringExtra(ExerciseMenuActivity.FILEDIR);
+    subject = intent.getStringExtra(ExerciseMenuActivity.SUBJECT);
+
     opts = new Integer[50];
   }
 
@@ -217,10 +223,6 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
   }
 
   public List getContent() {
-    Intent intent = getIntent();
-    String fileDir = intent.getStringExtra(ExerciseMenuActivity.FILEDIR);
-    subject = intent.getStringExtra(ExerciseMenuActivity.SUBJECT);
-
     AssetManager am = this.getAssets();
     String json = "";
     try {
