@@ -20,7 +20,7 @@ public class TitleActivity extends AppCompatActivity {
     findViewById(R.id.riwayatMainMenu).setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        startActivity(new Intent(TitleActivity.this, HistoryMenuActivity.class));
+        startActivity(new Intent(TitleActivity.this, HighscoreMenuActivity.class));
       }
     });
   }
@@ -30,6 +30,6 @@ public class TitleActivity extends AppCompatActivity {
   }
 
   public void gotoHistoryMenu(View view) {
-    startActivity(new Intent(getApplicationContext(), HistoryMenuActivity.class));
+    startActivity(new Intent(getApplicationContext(), HighscoreMenuActivity.class));
   }
 }

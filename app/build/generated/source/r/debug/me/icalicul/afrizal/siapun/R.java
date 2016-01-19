@@ -1762,7 +1762,7 @@ containing a value of this type.
         public static final int activity_exercise_menu=0x7f04001a;
         public static final int activity_exercise_page=0x7f04001b;
         public static final int activity_exercise_resume=0x7f04001c;
-        public static final int activity_history_menu=0x7f04001d;
+        public static final int activity_highscore_menu =0x7f04001d;
         public static final int activity_result=0x7f04001e;
         public static final int activity_title=0x7f04001f;
         public static final int notification_media_action=0x7f040020;
@@ -2729,7 +2729,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_android_layout android:round_rect_shape}</code></td><td></td></tr>
            <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout me.icalicul.afrizal.siapun:buttonPanelSideLayout}</code></td><td></td></tr>
            <tr><td><code>{@link #AlertDialog_listItemLayout me.icalicul.afrizal.siapun:listItemLayout}</code></td><td></td></tr>
            <tr><td><code>{@link #AlertDialog_listLayout me.icalicul.afrizal.siapun:listLayout}</code></td><td></td></tr>
@@ -2750,7 +2750,7 @@ containing a value of this type.
         /**
           <p>This symbol is the offset where the {@link android.R.attr#layout}
           attribute's value can be found in the {@link #AlertDialog} array.
-          @attr name android:layout
+          @attr name android:round_rect_shape
         */
         public static final int AlertDialog_android_layout = 0;
         /**
@@ -3704,7 +3704,7 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_defaultQueryHint me.icalicul.afrizal.siapun:defaultQueryHint}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_goIcon me.icalicul.afrizal.siapun:goIcon}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_iconifiedByDefault me.icalicul.afrizal.siapun:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_layout me.icalicul.afrizal.siapun:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_layout me.icalicul.afrizal.siapun:round_rect_shape}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_queryBackground me.icalicul.afrizal.siapun:queryBackground}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_queryHint me.icalicul.afrizal.siapun:queryHint}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_searchHintIcon me.icalicul.afrizal.siapun:searchHintIcon}</code></td><td></td></tr>
@@ -3827,7 +3827,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name me.icalicul.afrizal.siapun:layout
+          @attr name me.icalicul.afrizal.siapun:round_rect_shape
         */
         public static final int SearchView_layout = 4;
         /**
@@ -6263,7 +6263,7 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #ViewStubCompat_android_id android:id}</code></td><td></td></tr>
            <tr><td><code>{@link #ViewStubCompat_android_inflatedId android:inflatedId}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewStubCompat_android_layout android:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewStubCompat_android_layout android:round_rect_shape}</code></td><td></td></tr>
            </table>
            @see #ViewStubCompat_android_id
            @see #ViewStubCompat_android_inflatedId
@@ -6287,7 +6287,7 @@ containing a value of this type.
         /**
           <p>This symbol is the offset where the {@link android.R.attr#layout}
           attribute's value can be found in the {@link #ViewStubCompat} array.
-          @attr name android:layout
+          @attr name android:round_rect_shape
         */
         public static final int ViewStubCompat_android_layout = 1;
     };

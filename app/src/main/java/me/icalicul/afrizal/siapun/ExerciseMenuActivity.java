@@ -1,11 +1,10 @@
 package me.icalicul.afrizal.siapun;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -15,7 +14,6 @@ public class ExerciseMenuActivity extends AppCompatActivity {
   private Spinner spinnerMapel;
 
   public static final String FILEDIR = "me.icalicul.afrizal.siapun.FILEDIR";
-  public static final String DEBUG = "DEBUG >> ";
   public static final String SUBJECT = "me.icalicul.afrizal.siapun.SUBJECT";
 
   @Override

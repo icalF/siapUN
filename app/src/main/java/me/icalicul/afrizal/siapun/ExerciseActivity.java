@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -122,13 +121,13 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
     checkListener = new RadioGroup.OnCheckedChangeListener() {
       @Override
       public void onCheckedChanged(RadioGroup group, int checkedId) {
-        RadioButton checkedRadioButton = (RadioButton) group.findViewById(checkedId);
-        if (checkedRadioButton == null) return;
-        while (!optionChecking.tryLock()) {}
-        optionChecking.lock();
-        int checkedIndex = group.indexOfChild(checkedRadioButton);
-        opts[questionNum] = checkedIndex;
-        optionChecking.unlock();
+      RadioButton checkedRadioButton = (RadioButton) group.findViewById(checkedId);
+      if (checkedRadioButton == null) return;
+      while (!optionChecking.tryLock()) {}
+      optionChecking.lock();
+      int checkedIndex = group.indexOfChild(checkedRadioButton);
+      opts[questionNum] = checkedIndex;
+      optionChecking.unlock();
       }
     };
   }

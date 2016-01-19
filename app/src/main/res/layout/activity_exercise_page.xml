@@ -19,59 +19,75 @@
     android:layout_alignParentRight="true"
     android:layout_alignParentEnd="true"/>
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceSmall"
-    android:text="Lorem ipsum dolor sit amet"
-    android:id="@+id/question"
-    android:layout_marginTop="60dp"
-    android:layout_below="@+id/timerText"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="20dp"/>
-
-  <RadioGroup
+  <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@+id/question"
-    android:layout_alignRight="@+id/question"
-    android:layout_alignEnd="@+id/question"
-    android:layout_alignLeft="@+id/question"
-    android:layout_alignStart="@+id/question"
-    android:layout_marginBottom="40dp"
-    android:id="@+id/radioGroup">
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollViewQ"
+    android:layout_below="@+id/timerText"
+    android:layout_above="@+id/noSoal"
+    android:layout_alignParentBottom="false"
+    android:layout_alignParentTop="false" >
 
-    <RadioButton
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="New RadioButton"
-      android:id="@+id/choice1"/>
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" >
 
-    <RadioButton
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="New RadioButton"
-      android:id="@+id/choice2"/>
+      <TextView
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Lorem ipsum dolor sit amet"
+        android:id="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/radioGroup"/>
 
-    <RadioButton
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="New RadioButton"
-      android:id="@+id/choice3"/>
+      <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignRight="@+id/question"
+        android:layout_alignEnd="@+id/question"
+        android:layout_alignLeft="@+id/question"
+        android:layout_alignStart="@+id/question"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/radioGroup"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false">
 
-    <RadioButton
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="New RadioButton"
-      android:id="@+id/choice4"/>
+        <RadioButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="New RadioButton"
+          android:id="@+id/choice1"/>
 
-    <RadioButton
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="New RadioButton"
-      android:id="@+id/choice5"/>
+        <RadioButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="New RadioButton"
+          android:id="@+id/choice2"/>
 
-  </RadioGroup>
+        <RadioButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="New RadioButton"
+          android:id="@+id/choice3"/>
+
+        <RadioButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="New RadioButton"
+          android:id="@+id/choice4"/>
+
+        <RadioButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="New RadioButton"
+          android:id="@+id/choice5"/>
+
+      </RadioGroup>
+    </RelativeLayout>
+
+  </ScrollView>
 
   <Button
     android:layout_width="40dp"
@@ -117,10 +133,7 @@
     android:layout_alignParentTop="true"
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true"
-    android:layout_above="@+id/question"
-    android:textAlignment="center"
     android:gravity="center"
-    android:elegantTextHeight="false"
     android:onClick="finishExercise"/>
 
 </RelativeLayout>

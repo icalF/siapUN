@@ -15,7 +15,7 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-    <activity android:name=".HistoryMenuActivity"/>
+    <activity android:name=".HighscoreMenuActivity"/>
     <activity android:name=".ExerciseActivity"/>
     <activity android:name=".ResultActivity">
     </activity>
