@@ -35,11 +35,13 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
   private TaskTimer timer;
   private long remainingTime = TIME_LIMIT;
 
+  String fileDir;
+  int pkg;
+  String subject;
+
   private List<Soal> soals;
   private Integer[] opts;
   private Spinner spinner;
-  private String fileDir;
-  private String subject;
   private int questionNum = 0;
   private RadioGroup.OnCheckedChangeListener checkListener;
   private Lock optionChecking = new ReentrantLock();
@@ -68,7 +70,8 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
 
     Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
     intent.putExtra(SCORE, (double) score / soals.size());
-    intent.putExtra(ExerciseMenuActivity.SUBJECT, subject);
+    intent.putExtra(HighscoreMenuActivity.PAKET, pkg);
+    intent.putExtra(HighscoreMenuActivity.MAPEL, subject);
     startActivity(intent);
   }
 
@@ -103,12 +106,12 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_exercise_init);
+    opts = new Integer[50];
 
     Intent intent = getIntent();
-    fileDir = intent.getStringExtra(ExerciseMenuActivity.FILEDIR);
-    subject = intent.getStringExtra(ExerciseMenuActivity.SUBJECT);
-
-    opts = new Integer[50];
+    subject = intent.getStringExtra(HighscoreMenuActivity.MAPEL);
+    pkg = intent.getIntExtra(HighscoreMenuActivity.PAKET, -1);
+    fileDir = "questions/v" + pkg + "/" + subject + ".json";
   }
 
   @Override
@@ -160,7 +163,6 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
     RadioButton choice2 = (RadioButton) findViewById(R.id.choice2);
     RadioButton choice3 = (RadioButton) findViewById(R.id.choice3);
     RadioButton choice4 = (RadioButton) findViewById(R.id.choice4);
-    RadioButton choice5 = (RadioButton) findViewById(R.id.choice5);
 
     // Set content view
     Soal soal = soals.get(index);
@@ -169,7 +171,6 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
     choice2.setText(soal.getChoices().get(1));
     choice3.setText(soal.getChoices().get(2));
     choice4.setText(soal.getChoices().get(3));
-    choice5.setText(soal.getChoices().get(4));
 
     // Set checked radio
     Integer choice = opts[index];

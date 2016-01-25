@@ -13,6 +13,7 @@ public class StatisticsSchema {
   public static abstract class StatisticEntry implements BaseColumns {
     public static final String TABLE_NAME = "entry";
     public static final String COLUMN_NAME_SUBJECT = "subject";
+    public static final String COLUMN_NAME_PACKAGE = "package";
     public static final String COLUMN_NAME_SCORE = "score";
   }
 

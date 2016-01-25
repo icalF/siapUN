@@ -5,9 +5,7 @@
     <item>Bahasa Indonesia</item>
     <item>Bahasa Inggris</item>
     <item>Matematika</item>
-    <item>Fisika</item>
-    <item>Kimia</item>
-    <item>Biologi</item>
+    <item>IPA</item>
   </string-array>
     <string-array name="spinner_paket">
     <item>-- Pilih paket --</item>
@@ -19,8 +17,6 @@
     <item>Paket 6</item>
     <item>Paket 7</item>
     <item>Paket 8</item>
-    <item>Paket 9</item>
-    <item>Paket 10</item>
   </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -125,6 +121,7 @@
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/></declare-styleable>
     <declare-styleable name="ViewBackgroundHelper"><attr name="android:background"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
+    <declare-styleable name="round_rect_shape"><attr format="string" name="exampleString"/><attr format="dimension" name="exampleDimension"/><attr format="color" name="exampleColor"/><attr format="color|reference" name="exampleDrawable"/></declare-styleable>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
     <dimen name="abc_action_bar_default_padding_end_material">0dp</dimen>
@@ -238,13 +235,14 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">Siap UN</string>
     <string name="checked_stat">checked</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="paket1h">paket1h</string>
+    <string name="paket2h">paket2h</string>
+    <string name="paket3h">paket3h</string>
+    <string name="paket4h">paket4h</string>
     <string name="ready_confirm_text">SIAP?</string>
     <string name="resume_confirm_text">LANJUTKAN?</string>
     <string name="start">Mulai</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="title_activity_fullscreen">FullscreenActivity</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

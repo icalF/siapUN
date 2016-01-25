@@ -8,35 +8,47 @@
   android:paddingLeft="@dimen/activity_horizontal_margin"
   android:paddingRight="@dimen/activity_horizontal_margin"
   android:paddingTop="@dimen/activity_vertical_margin"
-  tools:context="me.icalicul.afrizal.siapun.ExerciseMenuActivity"
-  android:gravity="center_horizontal">
+  tools:context=".ExerciseMenuActivity"
+  android:gravity="center">
 
-  <Spinner
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/spinnerPaket"
-    android:spinnerMode="dropdown"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="109dp"
-    />
-
-  <Spinner
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/spinnerMapel"
-    android:layout_below="@+id/spinnerPaket"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="20dp"/>
 
   <Button
-    style="?android:attr/buttonStyleSmall"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/startButton"
-    android:layout_below="@+id/spinnerMapel"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="58dp"
-    android:singleLine="true"
-    android:onClick="beginExercise"
-    android:text="@string/start"/>
+    android:layout_width="480px"
+    android:layout_height="100px"
+    android:background="@drawable/round_rect_shape"
+    android:id="@+id/paket1e"
+    android:text="Paket 1"/>
+
+  <Button
+    android:layout_width="480px"
+    android:layout_height="100px"
+    android:background="@drawable/round_rect_shape"
+    android:id="@+id/paket2e"
+    android:layout_below="@+id/paket1e"
+    android:layout_alignLeft="@+id/paket1e"
+    android:layout_alignStart="@+id/paket1e"
+    android:layout_marginTop="20dp"
+    android:text="Paket 2"/>
+
+  <Button
+    android:layout_width="480px"
+    android:layout_height="100px"
+    android:background="@drawable/round_rect_shape"
+    android:id="@+id/paket3e"
+    android:layout_below="@+id/paket2e"
+    android:layout_alignLeft="@+id/paket2e"
+    android:layout_alignStart="@+id/paket2e"
+    android:layout_marginTop="20dp"
+    android:text="Paket 3"/>
+
+  <Button
+    android:layout_width="480px"
+    android:layout_height="100px"
+    android:background="@drawable/round_rect_shape"
+    android:id="@+id/paket4e"
+    android:layout_below="@+id/paket3e"
+    android:layout_alignLeft="@+id/paket3e"
+    android:layout_alignStart="@+id/paket3e"
+    android:layout_marginTop="20dp"
+    android:text="Paket 4"/>
 </RelativeLayout>

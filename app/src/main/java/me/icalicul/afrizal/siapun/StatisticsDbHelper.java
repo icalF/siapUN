@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Afrizal on 1/18/2016.
@@ -16,18 +15,20 @@ public class StatisticsDbHelper extends SQLiteOpenHelper {
 
   private static final String TEXT_TYPE = " TEXT";
   private static final String REAL_TYPE = " REAL";
+  private static final String INTEGER_TYPE = " INTEGER";
   private static final String COMMA_SEP = ",";
   private static final String SQL_CREATE_ENTRIES =
     "CREATE TABLE " + StatisticsSchema.StatisticEntry.TABLE_NAME + " (" +
       StatisticsSchema.StatisticEntry._ID + " INTEGER PRIMARY KEY," +
       StatisticsSchema.StatisticEntry.COLUMN_NAME_SUBJECT + TEXT_TYPE + COMMA_SEP +
+      StatisticsSchema.StatisticEntry.COLUMN_NAME_PACKAGE + INTEGER_TYPE + COMMA_SEP +
       StatisticsSchema.StatisticEntry.COLUMN_NAME_SCORE + REAL_TYPE +
       " )";
   private static final String SQL_DELETE_ENTRIES =
     "DROP TABLE IF EXISTS " + StatisticsSchema.StatisticEntry.TABLE_NAME;
 
   // If you change the database schema, you must increment the database version.
-  public static final int DATABASE_VERSION = 1;
+  public static final int DATABASE_VERSION = 2;
   public static final String DATABASE_NAME = "Statistics.db";
 
   public StatisticsDbHelper(Context context) {
@@ -45,28 +46,39 @@ public class StatisticsDbHelper extends SQLiteOpenHelper {
     onCreate(db);
   }
 
-  public void insertScore(String subject, double score) {
+  public void insertScore(String subject, int pkg, double score) {
     SQLiteDatabase db = this.getWritableDatabase();
     ContentValues contentValues = new ContentValues();
     contentValues.put(StatisticsSchema.StatisticEntry.COLUMN_NAME_SUBJECT, subject);
+    contentValues.put(StatisticsSchema.StatisticEntry.COLUMN_NAME_PACKAGE, pkg);
     contentValues.put(StatisticsSchema.StatisticEntry.COLUMN_NAME_SCORE, score);
-    long l = db.insert(StatisticsSchema.StatisticEntry.TABLE_NAME, null, contentValues);
+    db.insert(StatisticsSchema.StatisticEntry.TABLE_NAME, null, contentValues);
+    db.close();
   }
 
-  public List<ScoreRecord> getScores() {
+  public ArrayList<String> getScores(int pkg, String subject) {
     SQLiteDatabase db = this.getReadableDatabase();
-    Cursor res =  db.rawQuery( "SELECT * FROM " + StatisticsSchema.StatisticEntry.TABLE_NAME, null );
+    String[] projection = { StatisticsSchema.StatisticEntry.COLUMN_NAME_SCORE };
+    Cursor res = db.query(
+      StatisticsSchema.StatisticEntry.TABLE_NAME,                           // The table to query
+      projection,                                                           // The columns to return
+      StatisticsSchema.StatisticEntry.COLUMN_NAME_SUBJECT + " = ? AND " +
+        StatisticsSchema.StatisticEntry.COLUMN_NAME_PACKAGE + " = ?",       // The columns for the WHERE clause
+      new String[] {subject, String.valueOf(pkg)},                          // The values for the WHERE clause
+      null,                                                                 // don't group the rows
+      null,                                                                 // don't filter by row groups
+      null                                                                  // The sort order
+    );
     res.moveToFirst();
 
-    List<ScoreRecord> list = new ArrayList<>();
+    ArrayList<String> list = new ArrayList<>();
     while(!res.isAfterLast()){
-      list.add( new ScoreRecord(
-        res.getString(res.getColumnIndex(StatisticsSchema.StatisticEntry.COLUMN_NAME_SUBJECT)),
+      list.add(String.valueOf(
         res.getDouble(res.getColumnIndex(StatisticsSchema.StatisticEntry.COLUMN_NAME_SCORE))
       ));
       res.moveToNext();
     }
-
+    db.close();
     return list;
   }
 }

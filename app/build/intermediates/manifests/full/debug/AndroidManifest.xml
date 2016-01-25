@@ -21,11 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="me.icalicul.afrizal.siapun.HistoryMenuActivity" />
+        <activity android:name="me.icalicul.afrizal.siapun.HighscoreMenuActivity" />
         <activity android:name="me.icalicul.afrizal.siapun.ExerciseActivity" />
         <activity android:name="me.icalicul.afrizal.siapun.ResultActivity" >
         </activity>
         <activity android:name="me.icalicul.afrizal.siapun.ExerciseMenuActivity" >
+        </activity>
+        <activity android:name="me.icalicul.afrizal.siapun.HighscoreActivity" >
         </activity>
     </application>
 

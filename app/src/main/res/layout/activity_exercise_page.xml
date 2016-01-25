@@ -7,43 +7,67 @@
   android:paddingLeft="@dimen/activity_horizontal_margin"
   android:paddingRight="@dimen/activity_horizontal_margin"
   android:paddingTop="@dimen/activity_vertical_margin"
-  tools:context=".ExerciseActivity">
+  tools:context=".ExerciseActivity"
+  >
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="32dp"
-    android:text="02 : 00 : 00"
-    android:id="@+id/timerText"
-    android:gravity="center"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentEnd="true"/>
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/statbar">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="32dp"
+      android:text="02 : 00 : 00"
+      android:id="@+id/timerText"
+      android:gravity="center"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd="true"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="32dp"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:text="Selesai"
+      android:id="@+id/done"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:gravity="center"
+      android:onClick="finishExercise"/>
+  </RelativeLayout>
 
   <ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/scrollViewQ"
-    android:layout_below="@+id/timerText"
-    android:layout_above="@+id/noSoal"
+    android:layout_above="@+id/navbar"
+    android:layout_below="@+id/statbar"
+    android:paddingTop="40dp"
+    android:paddingBottom="30dp"
     android:layout_alignParentBottom="false"
-    android:layout_alignParentTop="false" >
+    >
 
-    <RelativeLayout
+    <LinearLayout
+      android:orientation="vertical"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content" >
+      android:layout_height="match_parent"
+      >
 
       <TextView
-        android:layout_width="500px"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Lorem ipsum dolor sit amet"
         android:id="@+id/question"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
-        android:layout_above="@+id/radioGroup"/>
+        android:layout_above="@+id/radioGroup"
+        android:layout_gravity="center_horizontal"/>
 
       <RadioGroup
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignRight="@+id/question"
         android:layout_alignEnd="@+id/question"
@@ -52,7 +76,7 @@
         android:layout_marginBottom="40dp"
         android:id="@+id/radioGroup"
         android:layout_alignParentBottom="true"
-        android:baselineAligned="false">
+        android:layout_gravity="center_horizontal">
 
         <RadioButton
           android:layout_width="wrap_content"
@@ -78,62 +102,49 @@
           android:text="New RadioButton"
           android:id="@+id/choice4"/>
 
-        <RadioButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="New RadioButton"
-          android:id="@+id/choice5"/>
-
       </RadioGroup>
-    </RelativeLayout>
-
+    </LinearLayout>
   </ScrollView>
 
-  <Button
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:id="@+id/left"
-    android:background="@drawable/arrow_up"
-    android:rotation="-90"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:onClick="prevQuestion"/>
-
-  <Spinner
+  <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="40dp"
-    android:id="@+id/noSoal"
-    android:spinnerMode="dropdown"
-    android:layout_alignParentBottom="true"
-    android:layout_toLeftOf="@+id/right"
-    android:layout_toRightOf="@+id/left"
-    android:layout_toEndOf="@+id/left"
-    android:layout_toStartOf="@+id/right"
-    android:layout_centerHorizontal="true"
-    android:dropDownWidth="wrap_content"/>
+    android:id="@+id/navbar"
+    android:layout_alignParentBottom="true">
 
-  <Button
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:id="@+id/right"
-    android:background="@drawable/arrow_up"
-    android:rotation="90"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentEnd ="true"
-    android:onClick="nextQuestion"/>
+    <Button
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:id="@+id/left"
+      android:background="@drawable/arrow_left"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:onClick="prevQuestion"/>
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="32dp"
-    android:textAppearance="?android:attr/textAppearanceMedium"
-    android:text="Selesai"
-    android:id="@+id/done"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:gravity="center"
-    android:onClick="finishExercise"/>
+    <Spinner
+      android:layout_width="wrap_content"
+      android:layout_height="40dp"
+      android:id="@+id/noSoal"
+      android:spinnerMode="dropdown"
+      android:layout_alignParentBottom="true"
+      android:layout_toLeftOf="@+id/right"
+      android:layout_toRightOf="@+id/left"
+      android:layout_toEndOf="@+id/left"
+      android:layout_toStartOf="@+id/right"
+      android:layout_centerHorizontal="true"
+      android:dropDownWidth="wrap_content"/>
+
+    <Button
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:id="@+id/right"
+      android:background="@drawable/arrow_right"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd ="true"
+      android:onClick="nextQuestion"/>
+
+  </RelativeLayout>
 
 </RelativeLayout>

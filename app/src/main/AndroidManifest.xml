@@ -21,6 +21,8 @@
     </activity>
     <activity android:name=".ExerciseMenuActivity">
     </activity>
+    <activity android:name=".HighscoreActivity">
+    </activity>
   </application>
 
 </manifest>

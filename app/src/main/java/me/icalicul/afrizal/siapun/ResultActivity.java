@@ -16,14 +16,15 @@ public class ResultActivity extends AppCompatActivity {
 
     Intent intent = getIntent();
     final double score = intent.getDoubleExtra(ExerciseActivity.SCORE, 0.0);
-    final String subject = intent.getStringExtra(ExerciseMenuActivity.SUBJECT);
+    final String subject = intent.getStringExtra(HighscoreMenuActivity.MAPEL);
+    final int pkg = intent.getIntExtra(HighscoreMenuActivity.PAKET, -1);
 
     new Thread() {
       @Override
       public void run() {
         // Save score to database
         new StatisticsDbHelper(getApplicationContext())
-          .insertScore(subject, score);
+          .insertScore(subject, pkg, score);
       }
     }.start();
 
