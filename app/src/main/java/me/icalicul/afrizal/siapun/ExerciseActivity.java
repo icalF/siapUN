@@ -9,7 +9,6 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -37,6 +36,24 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
   private final static long MILLIS = 1000;
   private TaskTimer timer;
   private long remainingTime = TIME_LIMIT;
+
+  private class ImageHandler implements Html.ImageGetter {
+    @Override
+    public Drawable getDrawable(String source) {
+      Drawable pics = null;
+      try {
+        pics = Drawable.createFromStream(getApplicationContext().getAssets().open(source), null);
+
+        int width = 650;
+        int height = pics.getIntrinsicHeight() * width / pics.getIntrinsicWidth();
+        pics.setBounds(0,0,width,height);
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+
+      return pics;
+    }
+  }
 
   String fileDir;
   int pkg;
@@ -169,29 +186,11 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
 
     // Set content view
     Soal soal = soals.get(index);
-    question.setText(Html.fromHtml(soal.getQuestion(), new Html.ImageGetter() {
-      @Override
-      public Drawable getDrawable(String source) {
-        Drawable pics = null;
-        try {
-          pics = Drawable.createFromResourceStream(getApplicationContext().getResources(),
-            new TypedValue(),
-            getApplicationContext().getResources().getAssets().open(source),
-            null
-          );
-//          pics = Drawable.createFromStream(getAssets().open(source), null);
-          pics.setBounds(0,0,600,600);
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
-        System.out.println(source);
-        return pics;
-      }
-    }, null));
-    choice1.setText(soal.getChoices().get(0));
-    choice2.setText(soal.getChoices().get(1));
-    choice3.setText(soal.getChoices().get(2));
-    choice4.setText(soal.getChoices().get(3));
+    question.setText(Html.fromHtml(soal.getQuestion(), new ImageHandler(), null));
+    choice1.setText(Html.fromHtml(soal.getChoices().get(0), new ImageHandler(), null));
+    choice2.setText(Html.fromHtml(soal.getChoices().get(1), new ImageHandler(), null));
+    choice3.setText(Html.fromHtml(soal.getChoices().get(2), new ImageHandler(), null));
+    choice4.setText(Html.fromHtml(soal.getChoices().get(3), new ImageHandler(), null));
 
     // Set checked radio
     Integer choice = opts[index];
