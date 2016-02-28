@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class TitleActivity extends AppCompatActivity {
+  public static final String PACKAGE = "me.icalicul.afrizal.siapun";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {

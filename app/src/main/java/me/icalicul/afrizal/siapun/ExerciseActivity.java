@@ -3,10 +3,13 @@ package me.icalicul.afrizal.siapun;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -166,7 +169,25 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
 
     // Set content view
     Soal soal = soals.get(index);
-    question.setText(soal.getQuestion());
+    question.setText(Html.fromHtml(soal.getQuestion(), new Html.ImageGetter() {
+      @Override
+      public Drawable getDrawable(String source) {
+        Drawable pics = null;
+        try {
+          pics = Drawable.createFromResourceStream(getApplicationContext().getResources(),
+            new TypedValue(),
+            getApplicationContext().getResources().getAssets().open(source),
+            null
+          );
+//          pics = Drawable.createFromStream(getAssets().open(source), null);
+          pics.setBounds(0,0,600,600);
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+        System.out.println(source);
+        return pics;
+      }
+    }, null));
     choice1.setText(soal.getChoices().get(0));
     choice2.setText(soal.getChoices().get(1));
     choice3.setText(soal.getChoices().get(2));
