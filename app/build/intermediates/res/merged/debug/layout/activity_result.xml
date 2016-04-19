@@ -11,12 +11,14 @@
   tools:context="me.icalicul.afrizal.siapun.ResultActivity">
 
   <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Large Text"
-    android:id="@+id/scoreView"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="133dp"/>
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:text="score"
+      android:id="@+id/scoreView"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="133dp"
+      android:textSize="40sp"
+      android:textIsSelectable="false"/>
 </RelativeLayout>

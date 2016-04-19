@@ -44,7 +44,7 @@
     android:id="@+id/scrollViewQ"
     android:layout_above="@+id/navbar"
     android:layout_below="@+id/statbar"
-    android:paddingTop="40dp"
+    android:paddingTop="20dp"
     android:paddingBottom="30dp"
     android:layout_alignParentBottom="false"
     >
@@ -56,27 +56,29 @@
       >
 
       <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Lorem ipsum dolor sit amet"
-        android:id="@+id/question"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:layout_above="@+id/radioGroup"
-        android:layout_gravity="center_horizontal"/>
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="?android:attr/textAppearanceSmall"
+          android:text="Lorem ipsum dolor sit amet"
+          android:id="@+id/question"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="20dp"
+          android:layout_above="@+id/radioGroup"
+          android:layout_gravity="center_horizontal"
+          android:minHeight="60dp"/>
 
       <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignRight="@+id/question"
-        android:layout_alignEnd="@+id/question"
-        android:layout_alignLeft="@+id/question"
-        android:layout_alignStart="@+id/question"
-        android:layout_marginBottom="40dp"
-        android:id="@+id/radioGroup"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center_horizontal">
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_alignRight="@+id/question"
+          android:layout_alignEnd="@+id/question"
+          android:layout_alignLeft="@+id/question"
+          android:layout_alignStart="@+id/question"
+          android:layout_marginBottom="40dp"
+          android:id="@+id/radioGroup"
+          android:layout_alignParentBottom="true"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp">
 
         <RadioButton
           android:layout_width="wrap_content"

@@ -1,24 +1,502 @@
 [
   {
-    "question" : "Lorem ipsum dolor sit ... ?",
+    "question": "Read the text above to answer questions 1 and 2<br><img src=\"questions/img/eng_1_1.png\"><br>What is the text about?",
     "choices" : [
-      "ames",
-      "ampes",
-      "amet",
-      "ahmed",
-      "kampes"
+      "Opening of a new shop",
+      "Description of a new home",
+      "Advertisement on a new restaurant",
+      "Congratulation to someone on moving to a new house"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "\" a blessing upon your new <u>dwelling</u>\"<br>The underlined word has similar meaning with ...",
+    "choices": [
+      "family",
+      "house",
+      "street",
+      "room"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Read the text to answer questions 3 to 5<br><img src=\"questions/img/eng_1_2.png\"><br>What is the message about?",
+    "choices": [
+      "A sick grandma",
+      "A delay of an activity",
+      "A Working project",
+      "A great plan"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Dinda can’t come to Mira’s house because ...",
+    "choices": [
+      "the project has not planned.",
+      "she has to work in the hospital.",
+      "her grandma is sick.",
+      "Dinda must be hospitalized"
     ],
     "answer" : 2
   },
   {
-    "question" : "Besar pasak daripada ... ?",
+    "question": "From the message above we know that ... ",
     "choices" : [
-      "tiang",
-      "√ ∛",
-      "∫ a dx",
-      "ayang",
-      "pesek"
+      "Dinda and Mira have to work together on their project.",
+      "Dinda’s grandma involves in the project.",
+      "Dinda and her grandma will meet Mira at the hospital.",
+      "Dinda expect Mira to stay in the hospital with her."
     ],
-    "answer" : 4
+    "answer": 0
+  },
+  {
+    "question": "Read the text to answer questions 6 and 7<br><img src=\"questions/img/eng_1_3.png\"><br>What is the text written for?",
+    "choices": [
+      "To invite somebody to a party",
+      "To celebrate a new baby",
+      "To welcome a princess",
+      "To show the way to Lexington"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Who should we contact to make a confirmation?",
+    "choices": [
+      "Brianna",
+      "Airy Princess",
+      "Mr. Solomon",
+      "Kathy"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Read the text to answer questions 8 to 9<br><img src=\"questions/img/eng_2_6.png\"><br>What is the announcement about?",
+    "choices": [
+      "Algebra class",
+      "Specific subjects for students",
+      "The roster of tutorial services",
+      "History, science, and chemistry lessons"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "We can conclude that ...",
+    "choices": [
+      "The services are free of charge.",
+      "The programs will be held during weekend.",
+      "There will be no more than 10 students in a class.",
+      "This is not part of after-school academic immersion program."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Read the text to answer questions 10 to 12<br><img src=\"questions/img/eng_1_4.png\"><br>What is offered in the advertisement?",
+    "choices": [
+      "Notebook",
+      "Mobile phone",
+      "Personal computer",
+      "Digital camera"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "How many coloursdoes the product offer?",
+    "choices": [
+      "One",
+      "Two",
+      "Four",
+      "Six "
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What reflects Samsung Galaxy III’s organic design?",
+    "choices": [
+      "Comfortable grip and gentle curves",
+      "Shooting sounds",
+      "Live wallpaper’s ripples",
+      "Beautifully seamless form"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Read the text to answer questions 13 to 15<br><img src=\"questions/img/eng_2_7.png\"><br>Who took the kids out to dinner?",
+    "choices": [
+      "Mary and her mom",
+      "Tim and Marie",
+      "Marie",
+      "Frank."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "From the text we know that…",
+    "choices": [
+      "Marie was hospitalized.",
+      "Frank is Marie’s brother.",
+      "Tim and Marie were very grateful to Frank.",
+      "Tim and Marie could not visit Marie’s mom in the hospital."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "\"Marie and I want you to know that we cherish your friendship.\" The word cherish means…",
+    "choices": [
+      "know.",
+      "hate.",
+      "appreciate.",
+      "misunderstand."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Read the text to answer question 16<br><img src=\"questions/img/eng_1_5.png\"><br>The above caution means ...",
+    "choices": [
+      "we need to buy eye-protection equipment.  ",
+      "It is very easy to find eye-protection equipment.",
+      "some students are using eye-protection equipment.",
+      "it is very important to wear eye protection equipment."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Read the text to answer questions 17 to 19<br><strong>The Rising Stars</strong><img src=\"questions/img/eng_2_8.png\"><br>What is the text about?",
+    "choices": [
+      "The life of Harry Potter stars",
+      "The making of Harry Potter movies",
+      "The success of Harry Potter series",
+      "The description of the stars of Harry Potter"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "\"She is an <u>openhanded</u>, friendly, and determined person.\" The underlined word is similar in meaning with...",
+    "choices": [
+      "generous.",
+      "grateful.",
+      "wealthy.",
+      "mean."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "From the text we know that the three rising stars are ...",
+    "choices": [
+      "good friends.",
+      "only good while on screen.",
+      "jealous with each other.",
+      "not willing to help each other."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Read the text to answer questions  20 to 22<br><img src=\"questions/img/eng_2_9.png\"><br>From the text we know that the students of Gontor 5 for Girls are...",
+    "choices": [
+      "Lazy and slow.",
+      "Active and independent.",
+      "Reactive and rebellious.",
+      "Irresponsible and enthusiastic."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the main idea of the last paragraph?",
+    "choices": [
+      "Students extracurricular activities in the morning.",
+      "Students have many activities in the evening.",
+      "Studentsdo their homework in the evening.",
+      "Students chat with their friend  before going to bed."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "When do the students make the beds and clean the rooms?",
+    "choices": [
+      "After they get up",
+      "Before they do their dawn prayer",
+      "Before they take a bath",
+      "Before the morning classes start"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Read the text to answer questions 23 to 25<br><img src=\"questions/img/eng_2_10.png\"><br>How large can Mahogany be?",
+    "choices": [
+      "Less than 5 feet in diameter",
+      "More than 6 feet in diameter",
+      "About 100 feet in diameter",
+      "Over 150 feet in diameter"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What makes Mahogany becoming increasingly rare?",
+    "choices": [
+      "Its size",
+      "Its exploitation",
+      "Its quality",
+      "Its value"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "\"... and is already <u>extinct</u> in parts of its original range.\" The underlined word means…",
+    "choices": [
+      "survive",
+      "vanish",
+      "stay alive",
+      "uncommon"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Read the text to answer questions 26 to 28<br><img src=\"questions/img/eng_2_11.png\"><br>What is the text about?",
+    "choices": [
+      "How to grind spices",
+      "How to fry chicken",
+      "How to make thick coconut milk",
+      "How to cook white chicken curry"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Why do we need to simmer after adding coconut milk?",
+    "choices": [
+      "To make the chicken tender",
+      "To get attractive color",
+      "To make the curry spicy",
+      "To enhance flavor"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "\"… turn to low heat until <u>it</u> is tender.\" The word it refers to…",
+    "choices": [
+      "heat",
+      "spice",
+      "chicken",
+      "vegetable oil"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Read the text to answer questions 29 to 30<br><img src=\"questions/img/eng_2_12.png\"><br>According to the text, we do not need to ...",
+    "choices": [
+      "wash the cloth",
+      "dry the spot",
+      "apply laundry pretreatment",
+      "use dryer"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "\"Allow the spot to dry.\" The underlined word has similar meaning to....",
+    "choices": [
+      "ink.",
+      "cloth.",
+      "mark.",
+      "fabric."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Read the text to answer questions 31 to 33<br<img src=\"questions/img/eng_2_13.png\"><br>What did the writer take home for his mom?",
+    "choices": [
+      "Good report from school",
+      "The photo of the horrible boy",
+      "The nasty note from Ms. Thomas",
+      "Punishment letter from the principal"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the main idea of paragraph 2",
+    "choices": [
+      "The boy had a horrible life.",
+      "The writer was blamed by his mom.",
+      "Ms. Thomas gave him a nasty note.",
+      "Something has to be learned from his experience."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What did the writer learn from his experience?",
+    "choices": [
+      "Violence won’t solve problems.",
+      "Telling tales makes life worse.",
+      "Being given a nasty note is a fun.",
+      "Making friend is not necessary."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Read the text to answer questions 34 to 36<br><img src=\"questions/img/eng_2_14.png\"><br>Apple II was built in ...",
+    "choices": [
+      "1976.",
+      "1977.",
+      "1993.",
+      "1995."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Steve Jobs resigned from his position because ...",
+    "choices": [
+      "Apple fired him.",
+      "he signed an agreement with Disney.",
+      "he won critical and popular acclaim.",
+      "his health condition became worse."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What did Steve do when he was fired from Apple?",
+    "choices": [
+      "Returning to Atari",
+      "Founding NeXT",
+      "Signing an agreement with Disney",
+      "Producing a series of feature films"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Read the text to answer questions 37 to 39<br><img src=\"questions/img/eng_2_15.png\"><br>Timmy is Sammy’s ...",
+    "choices": [
+      "brother.",
+      "cousin.",
+      "nephew.",
+      "classmate."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Timmy decided to steal Sammy's pen because ...",
+    "choices": [
+      "he wanted the pen.",
+      "the teacher asked him.",
+      "his friends made him angry.",
+      "he was jealous of Sammy."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What did Timmy do to Sammy’s new pen?",
+    "choices": [
+      "He hid it inside his bag.",
+      "He threw it to the dustbin.",
+      "He put it in the teacher’s bag.",
+      "He gave it to his friend."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Read the text to answer questions 40 to 42<br><img src=\"questions/img/eng_2_16.png\"><br>How did the man feel when he put the boy on the ass?",
+    "choices": [
+      "Sad",
+      "Cruel",
+      "Happy",
+      "Jealous"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "\"Now they decided to carry the ass on their shoulders.\" The word \"they\" in the sentence refers to ...",
+    "choices": [
+      "the travelers.",
+      "the boy and his father.",
+      "the boy and the ass.",
+      "the travelers and the ass."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What can we learn from the story?",
+    "choices": [
+      "You cannot please everyone.",
+      "We should help other people.",
+      "Do not believe anybody else.",
+      "You must take your child with you."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "For questions 43 to 45, complete the text with appropriate words. <br><img src=\"questions/img/eng_2_17.png\"><br>",
+    "choices": [
+      "today",
+      "one day",
+      "tomorrow",
+      "the next day"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "",
+    "choices": [
+      "kept",
+      "let",
+      "met",
+      "said"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "",
+    "choices": [
+      "come here",
+      "come in",
+      "go ahead",
+      "go back"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "For questions 46 to 48, complete the text with appropriate words<br><img src=\"questions/img/eng_2_18.png\"><br>",
+    "choices": [
+      "kettle",
+      "pan",
+      "stove",
+      "spatula"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "",
+    "choices": [
+      "let",
+      "make",
+      "start",
+      "stop to"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "",
+    "choices": [
+      "carelessly",
+      "reluctantly",
+      "carefully",
+      "immediately"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Arrange these words into a good sentence.<br>the - yesterday - attractive - was - my - life - most - school – day - of<br> 1       2            3         4    5     6      7       8       9    10",
+    "choices": [
+      "2 – 4 – 5 – 8 – 6 - 10 – 1 – 3 – 7 – 9 ",
+      "2 – 4 – 1 – 7 – 3 – 9 – 10 – 5 – 8 – 6 ",
+      "5 – 6 – 4 – 1 – 7 – 3 – 8 – 9 – 10 - 2 ",
+      "5 – 8 – 6 – 2 – 4 – 1 – 7 – 3 – 10 – 9 "
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Arrange the following sentences into a good paragraph.<br>1)  It is at 69 Sultan Agung Street. <br>2)  I put the computer on my table. <br>3)  I love my office because it is very comfortable. <br>4)  This is my office. <br>5)  There is also a cupboard near my table. <br>6)  In my office there is a set of personal computer. <br>7)  I keep some books in the cupboard.",
+    "choices": [
+      "3 – 6 – 2 – 4 – 1 – 5 – 7",
+      "3 - 4 - 1 – 5 – 7 – 6 – 2",
+      "4 – 3 – 1 – 6 – 2 – 7 – 5",
+      "4 – 1 – 6 – 2 – 5 – 7 – 3"
+    ],
+    "answer": 3
   }
 ]

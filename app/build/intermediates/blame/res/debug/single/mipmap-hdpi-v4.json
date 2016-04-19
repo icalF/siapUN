@@ -1,18 +1,6 @@
 [
     {
-        "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Gocil\\AndroidStudioProjects\\SiapUN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\C:\\Users\\Gocil\\AndroidStudioProjects\\SiapUN\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\run\\media\\ical\\0CA06D1DA06D0E90\\Users\\Afrizal\\AndroidStudioProjects\\siapUN\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\user\\siapUN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\user\\siapUN\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

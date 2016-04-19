@@ -234,13 +234,16 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">Siap UN</string>
+    <string name="back">Kembali</string>
     <string name="checked_stat">checked</string>
-    <string name="paket1h">paket1h</string>
-    <string name="paket2h">paket2h</string>
-    <string name="paket3h">paket3h</string>
-    <string name="paket4h">paket4h</string>
-    <string name="ready_confirm_text">SIAP?</string>
-    <string name="resume_confirm_text">LANJUTKAN?</string>
+    <string name="exit">Keluar</string>
+    <string name="latihan">Latihan</string>
+    <string name="paket_1">Paket 1</string>
+    <string name="paket_2">Paket 2</string>
+    <string name="paket_3">Paket 3</string>
+    <string name="paket_4">Paket 4</string>
+    <string name="resume_confirm_text">Lanjutkan</string>
+    <string name="riwayat">Riwayat</string>
     <string name="start">Mulai</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

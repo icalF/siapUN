@@ -32,41 +32,20 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ExerciseActivity extends AppCompatActivity implements OnItemSelectedListener {
+  public static final String SCORE = "me.icalicul.afrizal.siapun.SCORE";
   private final static long TIME_LIMIT = 7200000;
   private final static long MILLIS = 1000;
-  private TaskTimer timer;
-  private long remainingTime = TIME_LIMIT;
-
-  private class ImageHandler implements Html.ImageGetter {
-    @Override
-    public Drawable getDrawable(String source) {
-      Drawable pics = null;
-      try {
-        pics = Drawable.createFromStream(getApplicationContext().getAssets().open(source), null);
-
-        int width = 650;
-        int height = pics.getIntrinsicHeight() * width / pics.getIntrinsicWidth();
-        pics.setBounds(0,0,width,height);
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-
-      return pics;
-    }
-  }
-
   String fileDir;
   int pkg;
   String subject;
-
+  private TaskTimer timer;
+  private long remainingTime = TIME_LIMIT;
   private List<Soal> soals;
   private Integer[] opts;
   private Spinner spinner;
   private int questionNum = 0;
   private RadioGroup.OnCheckedChangeListener checkListener;
   private Lock optionChecking = new ReentrantLock();
-
-  public static final String SCORE = "me.icalicul.afrizal.siapun.SCORE";
 
   @Override
   public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -78,7 +57,14 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
   @Override
   public void onNothingSelected(AdapterView<?> parent) {} // stub
 
-  public void finishExercise(View view) { getScore(); }
+  public void finishExercise(View view) {
+    showConfirmDialog("Selesaikan latihan?", "Ya", "Tidak",
+            new DialogInterface.OnClickListener() {
+              public void onClick(DialogInterface dialog, int id) {
+                getScore();
+              }
+            }, null);
+  }
 
   private void getScore() {
     int score = 0;
@@ -95,33 +81,6 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
     startActivity(intent);
   }
 
-  private class TaskTimer extends CountDownTimer {
-    public TextView timerText;
-
-    TaskTimer(long millisInFuture, long countDownInterval) { super(millisInFuture, countDownInterval); }
-
-    public void onTick(long millisUntilFinished) {
-      remainingTime = millisUntilFinished;
-      putText(remainingTime / 1000);
-    }
-
-    @Override
-    public void onFinish() {
-      ExerciseActivity activity = (ExerciseActivity) getApplicationContext();
-      activity.getScore();
-    }
-
-    public String putNum(Long num) { return num < 10 ? "0"+num : num.toString(); }
-
-    public void putText(long remainingTime) {
-      long remainingHours = remainingTime / 3600;
-      long remainingMinutes = (remainingTime -= (remainingHours * 3600)) / 60;
-      long remainingSeconds = remainingTime - remainingMinutes * 60;
-      String timeView = putNum(remainingHours) + " : " + putNum(remainingMinutes) + " : " + putNum(remainingSeconds);
-      timerText.setText(timeView);
-    }
-  }
-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -131,7 +90,13 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
     Intent intent = getIntent();
     subject = intent.getStringExtra(HighscoreMenuActivity.MAPEL);
     pkg = intent.getIntExtra(HighscoreMenuActivity.PAKET, -1);
-    fileDir = "questions/v" + pkg + "/" + subject + ".json";
+    fileDir = new StringBuilder()
+            .append("questions/v")
+            .append(pkg)
+            .append('/')
+            .append(subject)
+            .append(".json")
+            .toString();
   }
 
   @Override
@@ -144,13 +109,14 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
     checkListener = new RadioGroup.OnCheckedChangeListener() {
       @Override
       public void onCheckedChanged(RadioGroup group, int checkedId) {
-      RadioButton checkedRadioButton = (RadioButton) group.findViewById(checkedId);
-      if (checkedRadioButton == null) return;
-      while (!optionChecking.tryLock()) {}
-      optionChecking.lock();
-      int checkedIndex = group.indexOfChild(checkedRadioButton);
-      opts[questionNum] = checkedIndex;
-      optionChecking.unlock();
+        RadioButton checkedRadioButton = (RadioButton) group.findViewById(checkedId);
+        if (checkedRadioButton == null) return;
+        while (!optionChecking.tryLock()) {
+        }
+        optionChecking.lock();
+        int checkedIndex = group.indexOfChild(checkedRadioButton);
+        opts[questionNum] = checkedIndex;
+        optionChecking.unlock();
       }
     };
   }
@@ -165,24 +131,47 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
 
   @Override
   public void onBackPressed() {
+    showConfirmDialog("Keluar dari latihan?", "Ya", "Tidak",
+            new DialogInterface.OnClickListener() {
+              public void onClick(DialogInterface dialog, int id) {
+                ExerciseActivity.this.finish();
+              }
+            }, null);
+  }
+
+  private void showConfirmDialog(String question, String yesChoice, String noChoice,
+                                 DialogInterface.OnClickListener ifTrue,
+                                 DialogInterface.OnClickListener ifFalse) {
     new AlertDialog.Builder(this)
-      .setMessage("Keluar dari latihan?")
-      .setCancelable(false)
-      .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int id) {
-          ExerciseActivity.this.finish();
-        }
-      })
-      .setNegativeButton("Tidak", null)
-      .show();
+            .setMessage(question)
+            .setCancelable(false)
+            .setPositiveButton(yesChoice, ifTrue)
+            .setNegativeButton(noChoice, ifFalse)
+            .show();
   }
 
   private void updateContent(int index) {
-    TextView question = (TextView) findViewById(R.id.question);
+    final TextView question = (TextView) findViewById(R.id.question);
     RadioButton choice1 = (RadioButton) findViewById(R.id.choice1);
     RadioButton choice2 = (RadioButton) findViewById(R.id.choice2);
     RadioButton choice3 = (RadioButton) findViewById(R.id.choice3);
     RadioButton choice4 = (RadioButton) findViewById(R.id.choice4);
+
+    class ImageHandler implements Html.ImageGetter {
+      @Override
+      public Drawable getDrawable(String source) {
+        Drawable pics = null;
+        try {
+          pics = Drawable.createFromStream(getApplicationContext().getAssets().open(source), null);
+          int width = question.getWidth();
+          int height = pics.getIntrinsicHeight() * width / pics.getIntrinsicWidth();
+          pics.setBounds(0, 0, width, height);
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+        return pics;
+      }
+    }
 
     // Set content view
     Soal soal = soals.get(index);
@@ -211,11 +200,18 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
       updateContent(++questionNum);
     }
   }
+
   public void prevQuestion(View view) {
     if(spinner.getSelectedItemPosition() > 0) {
       spinner.setSelection(spinner.getSelectedItemPosition() - 1);
       updateContent(--questionNum);
     }
+  }
+
+  private void back(View view) {
+    Intent intent = new Intent(getApplicationContext(), TitleActivity.class);
+    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+    startActivity(intent);
   }
 
   public void hasReady(View view) {
@@ -230,7 +226,7 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
     spinner = (Spinner) findViewById(R.id.noSoal);
     spinner.setOnItemSelectedListener(this);
     ArrayAdapter<String> adapter =
-      new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, options);
+            new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, options);
     spinner.setAdapter(adapter);
 
     // Assign proper radiobutton listener
@@ -268,6 +264,37 @@ public class ExerciseActivity extends AppCompatActivity implements OnItemSelecte
     }
 
     return content;
+  }
+
+  private class TaskTimer extends CountDownTimer {
+    public TextView timerText;
+
+    TaskTimer(long millisInFuture, long countDownInterval) {
+      super(millisInFuture, countDownInterval);
+    }
+
+    public void onTick(long millisUntilFinished) {
+      remainingTime = millisUntilFinished;
+      putText(remainingTime / 1000);
+    }
+
+    @Override
+    public void onFinish() {
+      ExerciseActivity activity = (ExerciseActivity) getApplicationContext();
+      activity.getScore();
+    }
+
+    public String putNum(Long num) {
+      return num < 10 ? "0" + num : num.toString();
+    }
+
+    public void putText(long remainingTime) {
+      long remainingHours = remainingTime / 3600;
+      long remainingMinutes = (remainingTime -= (remainingHours * 3600)) / 60;
+      long remainingSeconds = remainingTime - remainingMinutes * 60;
+      String timeView = putNum(remainingHours) + " : " + putNum(remainingMinutes) + " : " + putNum(remainingSeconds);
+      timerText.setText(timeView);
+    }
   }
 
 }

@@ -15,6 +15,7 @@ public class StatisticsSchema {
     public static final String COLUMN_NAME_SUBJECT = "subject";
     public static final String COLUMN_NAME_PACKAGE = "package";
     public static final String COLUMN_NAME_SCORE = "score";
+    public static final String COLUMN_NAME_CREATED = "created_at";
   }
 
 }
